@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 7.3.2.2 (Linux)"/>
+	<meta name="created" content="2022-09-18T15:49:10.641000000"/>
+	<meta name="changed" content="2022-09-18T15:49:26.737000000"/>
+	<style type="text/css">
+		@page { size: 8.27in 11.69in; margin: 0.79in }
+		p { line-height: 115%; margin-bottom: 0.1in; background: transparent }
+		a:link { color: #000080; so-language: zxx; text-decoration: underline }
+	</style>
+</head>
+<body lang="en-AU" link="#000080" vlink="#800000" dir="ltr"><p align="center" style="line-height: 100%; margin-bottom: 0in; page-break-before: always">
+<b>Project</b></p>
+<p style="line-height: 100%; margin-bottom: 0in"><br/>
+
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+<u>Overview</u></p>
+<p style="line-height: 100%; margin-bottom: 0in"><br/>
+
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+The project seeks to make available a low cost automation system for
+farmers. 
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+<br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><span style="font-weight: normal">The
+project will use low cost hardware, and initially </span><span style="font-weight: normal">custom
+developed </span><span style="font-weight: normal">software to
+</span><span style="font-weight: normal">specifically </span><span style="font-weight: normal">implement
+the system.</span></p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+<br/>
+
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+The hardware will consist of :</p>
+<ol>
+	<li><p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+	UHF CB radio * 2</p>
+	<li><p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+	Raspberry PI * 2</p>
+	<li><p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+	Switching modules eg relay circuitry or MOSFETS</p>
+</ol>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+<br/>
+
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+At least 2 CB radios will be linked. One will be a “base” station
+and can be controlled by a PC or raspberry PI. A second CB radio will
+be the remote transceiver, transferring control data to a Raspberry
+PI which in turn can control high power switching devices.</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+<br/>
+
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+The initial application is a water level measuring system.</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+<br/>
+
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+<img src="project5_p1.jpg" name="Image5" align="left" width="643" height="297" border="0"/>
+<br/>
+
+</p>
+<p style="font-weight: normal; line-height: 2000%; margin-bottom: 0in">
+<br/>
+
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+<u>Motivation</u></p>
+<p style="line-height: 100%; margin-bottom: 0in"><br/>
+
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+While there are some systems already on the market, they appear to be
+“high end” and costly. Furthermore they do not seem suitable for
+more simple applications on farms which I’ll call a medium range
+scenario. 
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+<br/>
+
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+“As seen on TV” there are some home based systems that use
+internet and/or WIFI. There are other smart phone based systems using
+an app to control devices. The problem with these solutions is that
+either range is restrictive in the case of direct WiFi, or a
+subscription to a phone carrier or satellite provider is needed (one
+for each device). 
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+<br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><span style="font-weight: normal">The
+proposed system outlined in this assignment will be low cost, and not
+</span><span style="font-weight: normal">requiring</span><span style="font-weight: normal">
+3</span><sup><span style="font-weight: normal">rd</span></sup><span style="font-weight: normal">
+party infrastructure.</span></p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+<br/>
+
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+<u>Description</u></p>
+<p style="line-height: 100%; margin-bottom: 0in"><br/>
+
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+Raspberry PI</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+<br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><span style="font-weight: normal">The
+Raspberry PI is (well was, they are in short supply – this will
+improve) an inexpensive, single board computer usually running a
+Linux based operating system. Although PI’s were initially designed
+to teach coding to students, they can be used in much more broad
+</span><span style="font-weight: normal">applications including
+hardware control. </span>
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+<br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><span style="font-weight: normal">In
+this case, the Pi performs </span><span style="font-weight: normal">many</span><span style="font-weight: normal">
+functions</span></p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+<br/>
+
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+Ancillary hardware input (sensors)</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+Hardware control (eg switching)</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+Interpreting data 
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+Formatting data commands ready for transmission</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+Controlling the CB radio (eg switching between receive and transmit
+modes)</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+Forwarding and receiving formatted data (in the form of tones)
+to/from the CB</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+<br/>
+
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+UHF CB Radio</p>
+<p style="line-height: 100%; margin-bottom: 0in"><br/>
+
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+The CB’s, connected to the Pi will be used for transmitting and
+receiving data used by ancillary devices eg switches and sensors.</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+<br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><span style="font-weight: normal">UHF
+CB radios are widely available in Australia. They operate on the
+designated 477MHz FM band. 80 channels are available – however
+there are only 2 channels </span><span style="font-weight: normal">allowed</span><span style="font-weight: normal">
+for telemetry use. The reliable “rule of thumb” range for the UHF
+frequency is 1km per watt </span><span style="font-weight: normal">of</span><span style="font-weight: normal">
+transmit power over line of sight. In Australia, there is a mandated
+maximum transmit power of 5 watts. </span>
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+<br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><span style="font-weight: normal">An
+obvious feature of using CB is it is free, </span><span style="font-weight: normal">in
+</span><span style="font-weight: normal">that is no license is
+required. If using </span><span style="font-weight: normal">other
+than</span><span style="font-weight: normal"> CB radio, while power
+and therefore range may be larger, requires annual license fee and
+management since a quarantined (or “owned”) part of the spectrum
+as managed by ACMA is required.</span></p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+<br/>
+
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+There are many CB options available for purchase. Offerings on Ebay
+can include units from overseas that have not been certified for use
+in Australia. These units should not be used as they can propagate
+radio “spatter” across multiple channels. These units are
+unlikely to be effective for telemetry use (as well as being
+illegal).  
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+<br/>
+
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+<br/>
+
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in; page-break-before: always">
+Ancillary devices</p>
+<p style="line-height: 100%; margin-bottom: 0in"><br/>
+
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+These can be classified into two categories – switches and sensors.
+A good thing about raspberry PI’s is that the ancillary devices can
+be connected to either the General Purpose Input and Output (GPIO)
+pins, or via USB connection. 
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+<br/>
+
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+An example of a switch is a relay or MOSFET. The purpose of these
+switches is to receive a low power signal from the Pi, and enable
+switching of high power (current and/or voltage) devices. A simple
+example is switching on a pump. MOSFETS can be used in high speed
+switching applications, for example where Pulse Width Modulation for
+devices that require a digital signal input (eg another electronic
+device). 
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+<br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><span style="font-weight: normal">Another
+method of c</span><span style="font-weight: normal">o</span><span style="font-weight: normal">mmunicating
+with switches is via USB, where a series of relays can be controlled
+through the </span><span style="font-weight: normal">a single</span><span style="font-weight: normal">
+USB cable, </span><span style="font-weight: normal">t</span><span style="font-weight: normal">his
+</span><span style="font-weight: normal">tends to be </span><span style="font-weight: normal">much
+more neater than using a series of wires from the GPIO. </span>
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+<br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><span style="font-weight: normal">Sensing
+hardware will </span><span style="font-weight: normal">communicate</span><span style="font-weight: normal">
+to the Pi. The signals can be in the form of a digital signal (ie a
+value is sent) or analogue (a voltage). An example of a simple
+analogue signal is a water level sensor that outputs a voltage when
+covered with water. A</span><span style="font-weight: normal">n</span><span style="font-weight: normal">
+example of a digital signal (in the form of a value) may be a
+temperature r</span><span style="font-weight: normal">e</span><span style="font-weight: normal">ading
+</span><span style="font-weight: normal">and is read as a byte</span></p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+<br/>
+
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+<u>Tools and Technologies</u></p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+<br/>
+
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+All the physical devices at low cost are explained above. 
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+<br/>
+
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+On the Pi, two broad categories custom software are needed:</p>
+<ul>
+	<li><p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+	Radio operation including signal formatting</p>
+	<li><p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+	Sensor communication</p>
+</ul>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+<br/>
+
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+For the radio operation we will need software to generate the tones
+needed for transmission of the data. It is anticipated a preexisting
+library can be used for this eg <a href="https://github.com/ahopper/PSKCoreSDR">https://github.com/ahopper/PSKCoreSDR</a></p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+<br/>
+
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+We will also need software to physically operate the radio. This will
+entail manipulating the Push To Talk (PTT) feature, usually by
+bridging to transmit, open to receive.</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+<br/>
+
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+In the case of communication with sensors, this can be achieved using
+simple Linux shell scripts to either operate the GPIO pins or send a
+signal in the case of USB operated sensors.</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+<br/>
+
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+<br/>
+
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in; page-break-before: always">
+<u>Skills Required</u></p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+<br/>
+
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in; text-decoration: none">
+Any person with electronics and Linux hobbyist experience should be
+make this project. However, please note, the information contained in
+this assignment is targeted at low power Direct Current projects
+only. Engagement of an electrician will be needed for any projects
+needing to use AC switching unless a 3<sup>rd</sup> party low power
+interface (to AC) is used.</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in; text-decoration: none">
+<br/>
+
+</p>
+<ul>
+	<li><p style="font-weight: normal; line-height: 100%; margin-bottom: 0in; text-decoration: none">
+	A simple interface to the PTT radio feature will require some basic
+	soldering skills.</p>
+	<li><p style="font-weight: normal; line-height: 100%; margin-bottom: 0in; text-decoration: none">
+	Likewise an interface from the sensor to GPIO will require some
+	connection. As mentioned, a preferable method is to use USB enabled
+	devices.</p>
+	<li><p style="font-weight: normal; line-height: 100%; margin-bottom: 0in; text-decoration: none">
+	Basic understanding of Linux shell scripts would be an advantage.</p>
+	<li><p style="font-weight: normal; line-height: 100%; margin-bottom: 0in; text-decoration: none">
+	If a level of sophistication is required at the base station, for
+	example a GUI showing water levels with an audible alarm, a software
+	engineer may be required</p>
+</ul>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in; text-decoration: none">
+<br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in"><u><span style="font-weight: normal">O</span><span style="font-weight: normal">utcome</span></u></p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in">
+<br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0in; text-decoration: none">
+<span style="font-weight: normal">As proof of concept, </span><span style="font-weight: normal">build
+and successfully test a</span><span style="font-weight: normal">
+</span><span style="font-weight: normal">radio telemetry system that
+assures a water level in a </span><span style="font-weight: normal">dam</span><span style="font-weight: normal">.
+</span><span style="font-weight: normal">Further more sophisticated
+applications can be undertake after the system is proven eg
+controlling a valve. A</span><span style="font-weight: normal"> GUI
+</span><span style="font-weight: normal">could be developed </span><span style="font-weight: normal">that
+that may present gauges to the user or alarms if thresholds are met. </span>
+</p>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0in; text-decoration: none">
+<br/>
+
+<p><br></p>
+<button onclick="history.back()">Go Back</button>
+
+</p>
+</body>
+</html>
